@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const adminRouter = require('./routes/adminRoute');
 dotenv.config();
 
 const app = express();
@@ -16,7 +17,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
   .then(() => console.log('Database connected successfully'))
   .catch(err => console.log('Database connection error: ', err));
 
-
+  app.use("/api/admin", adminRouter);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
