@@ -8,10 +8,7 @@ const Home = () => {
         <h1>Customer Satisfaction Feedback</h1>
       </header>
 
-      <p className="bg-blue-100 p-4 rounded-lg my-4">
-        We value your feedback! Please take a moment to let us know about your
-        experience.
-      </p>
+      <p className="bg-blue-100 p-4 rounded-lg my-4">Darwin</p>
       <button
         className="bg-blue-500 text-white border-none py-2 px-4 rounded cursor-pointer"
         onClick={() => alert("Feedback form coming soon!")}
