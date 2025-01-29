@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-
 const servicesSchema = new mongoose.Schema({
   service: {
     type: String,
