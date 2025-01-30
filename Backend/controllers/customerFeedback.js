@@ -11,12 +11,17 @@ const submitCustomerFeedback = async (req, res) => {
       address,
       contact,
       classification,
+      specificProfessional,
+      otherClassification,
       firstVisit,
       gender,
       age,
       withDisability,
       educationLevel,
       otherEducation,
+      service,
+      customerEvaluation,
+      libraryUser
     } = req.body;
 
     if (
@@ -27,7 +32,10 @@ const submitCustomerFeedback = async (req, res) => {
       !classification ||
       !gender ||
       !age ||
-      !educationLevel 
+      !educationLevel ||
+      !service || 
+      !customerEvaluation ||
+      !libraryUser
     ) {
       return res.status(400).json({ message: "All fields are required." });
     }
@@ -42,12 +50,17 @@ const submitCustomerFeedback = async (req, res) => {
       address,
       contact,
       classification,
+      specificProfessional,
+      otherClassification,
       firstVisit,
       gender,
       age,
       withDisability,
       educationLevel,
       otherEducation,
+      service,
+      customerEvaluation,
+      libraryUser
     });
     await customerProfile.save();
 
