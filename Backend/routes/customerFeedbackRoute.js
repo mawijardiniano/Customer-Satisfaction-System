@@ -7,7 +7,6 @@ const {
 } = require("../controllers/customerFeedback");
 
 router.get("/get-history", fetchHistory);
-router.post("/submit-feedback", submitCustomerFeedback);
-router.delete("/delete-feedback", deleteAllFeedback);
+
 
 module.exports = router;
